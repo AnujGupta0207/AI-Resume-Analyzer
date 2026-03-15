@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Hiring System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="main-card">
+    <h1>AI Resume Screening System</h1>
+
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+        <h3>Job Description</h3>
+        <textarea name="job_description" rows="5"
+        placeholder="Paste Job Description here..." required></textarea>
+
+        <h3>Paste Resume (OR Upload File)</h3>
+        <textarea name="resume_text" rows="6"
+        placeholder="Paste resume text here..."></textarea>
+
+        <br><br>
+        <input type="file" name="resume_file">
+
+        <br><br>
+        <button type="submit">Analyze Candidate</button>
+
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candidate Score</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="main-card">
+
+    <h1>Candidate Evaluation Result</h1>
+
+    <h2>Final Score: {{ result.final_score }}/100</h2>
+    <h2>Grade: {{ result.grade }}</h2>
+
+    <hr>
+
+    <p>Skill Match Score: {{ result.similarity_score }}</p>
+    <p>Experience Score: {{ result.experience_score }}</p>
+    <p>Education Score: {{ result.education_score }}</p>
+    <p>Project Impact Score: {{ result.project_score }}</p>
+
+    <br>
+    <a href="/">
+        <button>Evaluate Another Candidate</button>
+    </a>
+
+</div>
+
+</body>
+</html>
