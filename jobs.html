@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card">
+    <h2>All Job Openings</h2>
+</div>
+
+<div class="card">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for job in jobs %}
+        <tr>
+            <td>{{ job[0] }}</td>
+            <td>{{ job[1][:80] }}...</td>
+            <td>
+                <a href="/upload/{{ job[0] }}">Upload</a> |
+                <a href="/dashboard/{{ job[0] }}">Dashboard</a> |
+                <a href="/delete-job/{{ job[0] }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

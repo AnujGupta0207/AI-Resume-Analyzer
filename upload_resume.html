@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card">
+
+    <h2>Upload Resume</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <!-- Candidate Name -->
+        <label>Candidate Name</label><br>
+        <input type="text" name="candidate_name"
+               placeholder="Enter Candidate Name"
+               required
+               style="width:100%; padding:10px; margin-top:5px;">
+        <br><br>
+
+        <!-- Resume Text -->
+        <label>Paste Resume (Optional)</label><br>
+        <textarea name="resume_text"
+                  rows="8"
+                  placeholder="Paste resume here..."
+                  style="width:100%; padding:10px; margin-top:5px;"></textarea>
+        <br><br>
+
+        <!-- Upload PDF -->
+        <label>Upload Resume File (PDF)</label><br>
+        <input type="file" name="resume_file"
+               style="margin-top:5px;">
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit"
+                style="background:#2563eb; color:white; padding:10px 20px; border:none; border-radius:5px;">
+            Evaluate Resume
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

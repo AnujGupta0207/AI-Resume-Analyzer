@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card">
+    <h2>Create New Job</h2>
+
+    <form method="POST">
+        <textarea name="job_details" rows="8"
+        placeholder="Enter full job description..." required></textarea>
+
+        <button type="submit">Create Job</button>
+    </form>
+</div>
+
+{% endblock %}
